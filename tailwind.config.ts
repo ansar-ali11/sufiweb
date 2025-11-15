@@ -57,6 +57,21 @@ export default {
           border: "hsl(var(--sidebar-border))",
           ring: "hsl(var(--sidebar-ring))",
         },
+        islamic: {
+          teal: "hsl(var(--islamic-teal))",
+          "teal-dark": "hsl(var(--islamic-teal-dark))",
+          gold: "hsl(var(--islamic-gold))",
+          "gold-light": "hsl(var(--islamic-gold-light))",
+          burgundy: "hsl(var(--islamic-burgundy))",
+          emerald: "hsl(var(--islamic-emerald))",
+          cream: "hsl(var(--islamic-cream))",
+        },
+      },
+      fontFamily: {
+        amiri: ["Amiri", "serif"],
+        scheherazade: ["Scheherazade New", "serif"],
+        playfair: ["Playfair Display", "serif"],
+        sans: ["Inter", "sans-serif"],
       },
       borderRadius: {
         lg: "var(--radius)",
