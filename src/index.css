@@ -2,87 +2,110 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
-All colors MUST be HSL.
-*/
+/* Islamic-inspired Design System with elegant colors, patterns, and animations */
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    --background: 42 100% 97%;
+    --foreground: 20 14% 20%;
 
     --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    --card-foreground: 20 14% 20%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --popover-foreground: 20 14% 20%;
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    --primary: 173 80% 40%;
+    --primary-foreground: 0 0% 100%;
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    --secondary: 43 74% 66%;
+    --secondary-foreground: 20 14% 20%;
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    --muted: 42 47% 92%;
+    --muted-foreground: 20 14% 46%;
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    --accent: 173 58% 39%;
+    --accent-foreground: 0 0% 100%;
 
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive: 0 72% 51%;
+    --destructive-foreground: 0 0% 100%;
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    --border: 43 47% 88%;
+    --input: 43 47% 88%;
+    --ring: 173 80% 40%;
 
-    --radius: 0.5rem;
+    --radius: 0.75rem;
+
+    /* Islamic Color Palette */
+    --islamic-teal: 173 80% 40%;
+    --islamic-teal-dark: 173 58% 30%;
+    --islamic-gold: 43 74% 66%;
+    --islamic-gold-light: 43 100% 85%;
+    --islamic-burgundy: 0 63% 31%;
+    --islamic-emerald: 160 84% 39%;
+    --islamic-cream: 42 100% 97%;
+
+    /* Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(173 80% 40%), hsl(173 58% 55%));
+    --gradient-gold: linear-gradient(135deg, hsl(43 74% 66%), hsl(43 100% 75%));
+    --gradient-hero: linear-gradient(135deg, hsl(173 80% 40% / 0.95), hsl(0 63% 31% / 0.95));
+    
+    /* Shadows */
+    --shadow-glow: 0 10px 40px hsl(173 80% 40% / 0.3);
+    --shadow-elegant: 0 20px 60px hsl(0 0% 0% / 0.1);
+    
+    /* Animations */
+    --transition-smooth: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 
     --sidebar-background: 0 0% 98%;
-
     --sidebar-foreground: 240 5.3% 26.1%;
-
     --sidebar-primary: 240 5.9% 10%;
-
     --sidebar-primary-foreground: 0 0% 98%;
-
     --sidebar-accent: 240 4.8% 95.9%;
-
     --sidebar-accent-foreground: 240 5.9% 10%;
-
     --sidebar-border: 220 13% 91%;
-
     --sidebar-ring: 217.2 91.2% 59.8%;
   }
 
   .dark {
-    --background: 222.2 84% 4.9%;
-    --foreground: 210 40% 98%;
+    --background: 20 14% 12%;
+    --foreground: 42 100% 97%;
 
-    --card: 222.2 84% 4.9%;
-    --card-foreground: 210 40% 98%;
+    --card: 20 14% 15%;
+    --card-foreground: 42 100% 97%;
 
-    --popover: 222.2 84% 4.9%;
-    --popover-foreground: 210 40% 98%;
+    --popover: 20 14% 15%;
+    --popover-foreground: 42 100% 97%;
 
-    --primary: 210 40% 98%;
-    --primary-foreground: 222.2 47.4% 11.2%;
+    --primary: 173 80% 50%;
+    --primary-foreground: 20 14% 12%;
 
-    --secondary: 217.2 32.6% 17.5%;
-    --secondary-foreground: 210 40% 98%;
+    --secondary: 43 74% 66%;
+    --secondary-foreground: 20 14% 12%;
 
-    --muted: 217.2 32.6% 17.5%;
-    --muted-foreground: 215 20.2% 65.1%;
+    --muted: 20 14% 20%;
+    --muted-foreground: 42 47% 70%;
 
-    --accent: 217.2 32.6% 17.5%;
-    --accent-foreground: 210 40% 98%;
+    --accent: 173 58% 45%;
+    --accent-foreground: 42 100% 97%;
 
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive: 0 62% 50%;
+    --destructive-foreground: 42 100% 97%;
 
-    --border: 217.2 32.6% 17.5%;
-    --input: 217.2 32.6% 17.5%;
-    --ring: 212.7 26.8% 83.9%;
+    --border: 20 14% 25%;
+    --input: 20 14% 25%;
+    --ring: 173 80% 50%;
+
+    --islamic-teal: 173 80% 50%;
+    --islamic-teal-dark: 173 58% 35%;
+    --islamic-gold: 43 74% 70%;
+    --islamic-gold-light: 43 100% 80%;
+    --islamic-burgundy: 0 63% 40%;
+    --islamic-emerald: 160 84% 45%;
+    --islamic-cream: 42 47% 20%;
+
+    --gradient-hero: linear-gradient(135deg, hsl(173 80% 40% / 0.9), hsl(0 63% 31% / 0.9));
+
     --sidebar-background: 240 5.9% 10%;
     --sidebar-foreground: 240 4.8% 95.9%;
     --sidebar-primary: 224.3 76.3% 48%;
@@ -100,6 +123,106 @@ All colors MUST be HSL.
   }
 
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground font-sans;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-playfair;
+  }
+}
+
+@layer utilities {
+  /* Islamic Geometric Pattern Background */
+  .islamic-pattern {
+    background-image: 
+      repeating-linear-gradient(45deg, transparent, transparent 35px, hsl(var(--islamic-gold) / 0.05) 35px, hsl(var(--islamic-gold) / 0.05) 70px),
+      repeating-linear-gradient(-45deg, transparent, transparent 35px, hsl(var(--islamic-teal) / 0.05) 35px, hsl(var(--islamic-teal) / 0.05) 70px);
+  }
+
+  /* Decorative border styles */
+  .border-islamic {
+    border-image: linear-gradient(135deg, hsl(var(--islamic-gold)), hsl(var(--islamic-teal))) 1;
+  }
+
+  /* Smooth transitions */
+  .transition-smooth {
+    transition: var(--transition-smooth);
+  }
+
+  /* Gradient text */
+  .gradient-text {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-islamic-teal to-islamic-gold;
+  }
+
+  /* Custom animations */
+  @keyframes float {
+    0%, 100% {
+      transform: translateY(0px);
+    }
+    50% {
+      transform: translateY(-20px);
+    }
+  }
+
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes fadeInScale {
+    from {
+      opacity: 0;
+      transform: scale(0.9);
+    }
+    to {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+
+  @keyframes shimmer {
+    0% {
+      background-position: -1000px 0;
+    }
+    100% {
+      background-position: 1000px 0;
+    }
+  }
+
+  @keyframes rotate {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+
+  .animate-float {
+    animation: float 6s ease-in-out infinite;
+  }
+
+  .animate-fadeInUp {
+    animation: fadeInUp 1s ease-out forwards;
+  }
+
+  .animate-fadeInScale {
+    animation: fadeInScale 0.6s ease-out forwards;
+  }
+
+  .animate-shimmer {
+    background: linear-gradient(90deg, transparent, hsl(var(--islamic-gold) / 0.3), transparent);
+    background-size: 1000px 100%;
+    animation: shimmer 3s infinite;
+  }
+
+  .animate-rotate-slow {
+    animation: rotate 20s linear infinite;
   }
 }
