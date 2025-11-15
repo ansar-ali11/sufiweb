@@ -3,32 +3,32 @@ import { Card, CardContent } from "@/components/ui/card";
 const galleryItems = [
   {
     title: "Bridal Mehendi",
-    image: "https://images.unsplash.com/photo-1610117048930-ff5092976aaa?q=80&w=800",
+    image: "src/assets/m1.jpg",
     description: "Intricate bridal designs for your special day",
   },
   {
     title: "Traditional Patterns",
-    image: "https://images.unsplash.com/photo-1598513239239-d3d3a9000e66?q=80&w=800",
+    image: "src/assets/m2.jpg",
     description: "Classic Islamic geometric patterns",
   },
   {
     title: "Party Elegance",
-    image: "https://images.unsplash.com/photo-1610117049304-b7386add2f6c?q=80&w=800",
+    image: "src/assets/m3.jpg",
     description: "Perfect for celebrations and gatherings",
   },
   {
     title: "Modern Minimal",
-    image: "https://images.unsplash.com/photo-1623146339642-e949ddeea1b2?q=80&w=800",
+    image: "src/assets/m4.jpg",
     description: "Contemporary designs with traditional roots",
   },
   {
     title: "Arabic Designs",
-    image: "https://images.unsplash.com/photo-1614021422985-5ffbfb2e6c6a?q=80&w=800",
+    image: "https://cdn0.weddingwire.in/article/8044/original/1920/jpg/114408-habeedas-henna.jpeg",
     description: "Flowing Arabic calligraphy-inspired art",
   },
   {
     title: "Floral Art",
-    image: "https://images.unsplash.com/photo-1610117049044-8794b5eb4bcc?q=80&w=800",
+    image: "https://getethnic.com/wp-content/uploads/2023/09/Floral-Mehendi-Designs-27.jpg",
     description: "Delicate floral motifs and patterns",
   },
 ];
