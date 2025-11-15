@@ -3,22 +3,22 @@ import { Card, CardContent } from "@/components/ui/card";
 const galleryItems = [
   {
     title: "Bridal Mehendi",
-    image: "src/assets/m1.jpg",
+    image: "public/assets/m1.jpg",
     description: "Intricate bridal designs for your special day",
   },
   {
     title: "Traditional Patterns",
-    image: "src/assets/m2.jpg",
+    image: "public/assets/m2.jpg",
     description: "Classic Islamic geometric patterns",
   },
   {
     title: "Party Elegance",
-    image: "src/assets/m3.jpg",
+    image: "public/assets/m3.jpg",
     description: "Perfect for celebrations and gatherings",
   },
   {
     title: "Modern Minimal",
-    image: "src/assets/m4.jpg",
+    image: "public/assets/m4.jpg",
     description: "Contemporary designs with traditional roots",
   },
   {
