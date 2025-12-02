@@ -50,27 +50,37 @@ const Navigation = () => {
         </div>
 
         {/* Mobile Menu Button */}
-        <Button
-          variant="ghost"
-          size="icon"
-          className="md:hidden"
+        <button
+          className="md:hidden relative w-12 h-12 rounded-xl bg-gradient-to-br from-islamic-teal to-islamic-burgundy p-[2px] shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300"
           onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
         >
-          {isMobileMenuOpen ? <X /> : <Menu />}
-        </Button>
+          <div className="w-full h-full bg-background rounded-xl flex items-center justify-center">
+            {isMobileMenuOpen ? (
+              <X className="w-6 h-6 text-islamic-teal" />
+            ) : (
+              <Menu className="w-6 h-6 text-islamic-teal" />
+            )}
+          </div>
+        </button>
       </div>
 
       {/* Mobile Menu */}
       {isMobileMenuOpen && (
-        <div className="md:hidden absolute top-full left-0 right-0 bg-background/98 backdrop-blur-lg border-t border-border shadow-xl animate-fadeInUp">
-          <div className="container mx-auto px-4 py-6 flex flex-col gap-4">
-            {["home", "gallery", "about", "contact"].map((item) => (
+        <div className="md:hidden absolute top-full left-0 right-0 bg-gradient-to-b from-background via-background to-islamic-cream/30 backdrop-blur-xl border-t-2 border-islamic-gold shadow-2xl animate-fadeInUp">
+          {/* Decorative Pattern */}
+          <div className="absolute inset-0 islamic-pattern opacity-10 pointer-events-none" />
+          
+          <div className="container mx-auto px-4 py-8 flex flex-col gap-3 relative z-10">
+            {["home", "gallery", "about", "contact"].map((item, index) => (
               <button
                 key={item}
                 onClick={() => scrollToSection(item)}
-                className="text-left text-lg font-medium capitalize py-3 px-4 rounded-lg hover:bg-islamic-cream transition-colors"
+                className="group relative text-left text-xl font-semibold capitalize py-4 px-6 rounded-2xl bg-gradient-to-r from-card to-muted/20 hover:from-islamic-teal hover:to-islamic-burgundy hover:text-white transition-all duration-300 shadow-md hover:shadow-lg hover:scale-105 border-2 border-border hover:border-islamic-gold"
+                style={{ animationDelay: `${index * 0.1}s` }}
               >
-                {item}
+                <span className="relative z-10">{item}</span>
+                {/* Decorative accent */}
+                <div className="absolute left-2 top-1/2 -translate-y-1/2 w-1 h-8 bg-islamic-gold rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
               </button>
             ))}
           </div>

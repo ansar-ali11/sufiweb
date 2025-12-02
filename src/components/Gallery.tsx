@@ -50,30 +50,83 @@ const Gallery = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {galleryItems.map((item, index) => (
-            <Card
-              key={index}
-              className="group overflow-hidden border-2 border-border hover:border-islamic-gold transition-all duration-500 hover:shadow-2xl hover:scale-105 animate-fadeInScale"
-              style={{ animationDelay: `${index * 0.1}s` }}
-            >
-              <CardContent className="p-0 relative">
-                <div className="relative overflow-hidden aspect-[4/5]">
-                  <img
-                    src={item.image}
-                    alt={item.title}
-                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-islamic-burgundy/90 via-islamic-teal/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-                  
-                  <div className="absolute bottom-0 left-0 right-0 p-6 text-white transform translate-y-full group-hover:translate-y-0 transition-transform duration-500">
-                    <h3 className="text-2xl font-bold mb-2 font-playfair">{item.title}</h3>
-                    <p className="text-sm opacity-90">{item.description}</p>
+        {/* Infinite Scrolling Gallery */}
+        <div className="relative overflow-hidden">
+          <div className="flex gap-8 animate-scroll-left">
+            {/* First set of cards */}
+            {galleryItems.map((item, index) => (
+              <Card
+                key={`first-${index}`}
+                className="flex-shrink-0 w-[350px] group overflow-hidden rounded-3xl border-0 transition-all duration-500 shadow-2xl hover:shadow-islamic-gold/30 hover:-translate-y-4 bg-gradient-to-br from-islamic-teal/5 via-card to-islamic-burgundy/5"
+              >
+                <CardContent className="p-0 relative">
+                  <div className="relative overflow-hidden h-[450px] rounded-3xl">
+                    {/* Islamic Pattern Overlay */}
+                    <div className="absolute inset-0 islamic-pattern opacity-5 z-10 pointer-events-none" />
+                    
+                    <img
+                      src={item.image}
+                      alt={item.title}
+                      className="w-full h-full object-cover transition-all duration-700 group-hover:scale-110 group-hover:brightness-110"
+                    />
+                    
+                    {/* Gradient Overlay */}
+                    <div className="absolute inset-0 bg-gradient-to-t from-islamic-burgundy/90 via-islamic-burgundy/40 to-transparent opacity-60" />
+                    
+                    {/* Content Container - Always Visible */}
+                    <div className="absolute bottom-0 left-0 right-0 p-6 text-white z-20">
+                      {/* Decorative Line */}
+                      <div className="w-16 h-1 bg-islamic-gold rounded-full mb-4 group-hover:w-24 transition-all duration-500" />
+                      
+                      <h3 className="text-3xl font-bold mb-3 font-playfair drop-shadow-2xl group-hover:text-islamic-gold transition-colors duration-500">{item.title}</h3>
+                      <p className="text-base opacity-90 drop-shadow-lg leading-relaxed">{item.description}</p>
+                      
+                      {/* Decorative Corner Elements */}
+                      <div className="absolute top-4 right-4 w-12 h-12 border-t-2 border-r-2 border-islamic-gold/50 group-hover:border-islamic-gold transition-all duration-500" />
+                      <div className="absolute bottom-4 left-4 w-12 h-12 border-b-2 border-l-2 border-islamic-gold/50 group-hover:border-islamic-gold transition-all duration-500" />
+                    </div>
                   </div>
-                </div>
-              </CardContent>
-            </Card>
-          ))}
+                </CardContent>
+              </Card>
+            ))}
+            
+            {/* Duplicate set for seamless loop */}
+            {galleryItems.map((item, index) => (
+              <Card
+                key={`second-${index}`}
+                className="flex-shrink-0 w-[350px] group overflow-hidden rounded-3xl border-0 transition-all duration-500 shadow-2xl hover:shadow-islamic-gold/30 hover:-translate-y-4 bg-gradient-to-br from-islamic-teal/5 via-card to-islamic-burgundy/5"
+              >
+                <CardContent className="p-0 relative">
+                  <div className="relative overflow-hidden h-[450px] rounded-3xl">
+                    {/* Islamic Pattern Overlay */}
+                    <div className="absolute inset-0 islamic-pattern opacity-5 z-10 pointer-events-none" />
+                    
+                    <img
+                      src={item.image}
+                      alt={item.title}
+                      className="w-full h-full object-cover transition-all duration-700 group-hover:scale-110 group-hover:brightness-110"
+                    />
+                    
+                    {/* Gradient Overlay */}
+                    <div className="absolute inset-0 bg-gradient-to-t from-islamic-burgundy/90 via-islamic-burgundy/40 to-transparent opacity-60" />
+                    
+                    {/* Content Container - Always Visible */}
+                    <div className="absolute bottom-0 left-0 right-0 p-6 text-white z-20">
+                      {/* Decorative Line */}
+                      <div className="w-16 h-1 bg-islamic-gold rounded-full mb-4 group-hover:w-24 transition-all duration-500" />
+                      
+                      <h3 className="text-3xl font-bold mb-3 font-playfair drop-shadow-2xl group-hover:text-islamic-gold transition-colors duration-500">{item.title}</h3>
+                      <p className="text-base opacity-90 drop-shadow-lg leading-relaxed">{item.description}</p>
+                      
+                      {/* Decorative Corner Elements */}
+                      <div className="absolute top-4 right-4 w-12 h-12 border-t-2 border-r-2 border-islamic-gold/50 group-hover:border-islamic-gold transition-all duration-500" />
+                      <div className="absolute bottom-4 left-4 w-12 h-12 border-b-2 border-l-2 border-islamic-gold/50 group-hover:border-islamic-gold transition-all duration-500" />
+                    </div>
+                  </div>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
         </div>
       </div>
     </section>
