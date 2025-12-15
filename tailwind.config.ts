@@ -2,7 +2,12 @@ import type { Config } from "tailwindcss";
 
 export default {
   darkMode: ["class"],
-  content: ["./pages/**/*.{ts,tsx}", "./components/**/*.{ts,tsx}", "./app/**/*.{ts,tsx}", "./src/**/*.{ts,tsx}"],
+  content: [
+    "./pages/**/*.{ts,tsx}",
+    "./components/**/*.{ts,tsx}",
+    "./app/**/*.{ts,tsx}",
+    "./src/**/*.{ts,tsx}",
+  ],
   prefix: "",
   theme: {
     container: {
@@ -66,11 +71,22 @@ export default {
           emerald: "hsl(var(--islamic-emerald))",
           cream: "hsl(var(--islamic-cream))",
         },
+        mehendi: {
+          sage: "hsl(var(--mehendi-sage))",
+          beige: "hsl(var(--mehendi-beige))",
+          ivory: "hsl(var(--mehendi-ivory))",
+          green: "hsl(var(--mehendi-green))",
+          gold: "hsl(var(--mehendi-gold))",
+          brown: "hsl(var(--mehendi-brown))",
+          rose: "hsl(var(--mehendi-rose))",
+        },
       },
       fontFamily: {
         amiri: ["Amiri", "serif"],
         scheherazade: ["Scheherazade New", "serif"],
         playfair: ["Playfair Display", "serif"],
+        cormorant: ["Cormorant Garamond", "serif"],
+        cursive: ["Great Vibes", "cursive"],
         sans: ["Inter", "sans-serif"],
       },
       borderRadius: {

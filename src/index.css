@@ -45,6 +45,15 @@
     --islamic-emerald: 160 84% 39%;
     --islamic-cream: 42 100% 97%;
 
+    /* Mehendi Luxury Palette */
+    --mehendi-sage: 120 15% 55%;
+    --mehendi-beige: 35 30% 85%;
+    --mehendi-ivory: 40 40% 95%;
+    --mehendi-green: 95 35% 35%;
+    --mehendi-gold: 43 85% 55%;
+    --mehendi-brown: 25 40% 30%;
+    --mehendi-rose: 350 30% 75%;
+
     /* Gradients */
     --gradient-primary: linear-gradient(135deg, hsl(173 80% 40%), hsl(173 58% 55%));
     --gradient-gold: linear-gradient(135deg, hsl(43 74% 66%), hsl(43 100% 75%));
@@ -279,11 +288,20 @@
         animation-play-state: paused;
       }
 
-      /* Faster animation on mobile */
+      /* Faster animation on mobile with touch scroll support */
       @media (max-width: 768px) {
         .animate-scroll-left {
-          animation: scroll-left 18s linear infinite;
+          animation: scroll-left 25s linear infinite;
         }
+      }
+
+      /* Hide scrollbar but allow scrolling */
+      .scrollbar-hide {
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+      }
+      .scrollbar-hide::-webkit-scrollbar {
+        display: none;
       }
 
   .animate-pulse-glow {
